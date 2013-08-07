@@ -1,0 +1,35 @@
+<h1>Items in list</h1>
+
+<form id="newtodo" name="form" class="form-inline" novalidate>
+  <input ng-model="newtodo.description" type="text" id="description" placeholder="What needs to be done?" name="description" required autocomplete="off">
+  <button type="submit" class="btn" ng-click="create()" ng-disabled="form.$invalid || submitting">Create</button>
+</form>
+
+<table id="todos" class="table table-striped" ng-cloak>
+
+  <thead ng-show="todos.length">
+    <tr>
+      <td style="width: 1em">State</td>
+      <td>Description</td>
+      <td style="width: 1em"></td>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr ng-show="!todos.length">
+      <td colspan="3">No items found</td>
+    </tr>
+
+    <tr ng-repeat="todo in todos">
+      <td class="state">
+        <a ng-click="toggle(todo)">
+          <i class="icon-search {{todo.state}}"></i>
+        </a>
+      </td>
+      <td class="description">{{todo.description}}</td>
+      <td class="remove"><a ng-click="remove(todo)"><i class="icon-remove"></i></a></td>
+    </tr>
+  </tbody>
+
+</table>

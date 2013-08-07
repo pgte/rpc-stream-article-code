@@ -1,0 +1,19 @@
+{
+  "name": "toodoo-app",
+  "version": "0.0.1",
+  "description": "Your average todo application",
+  "main": "index.js",
+  "scripts": {
+    "start": "./index.js"
+  },
+  "bin": "./index.js",
+  "dependencies": {
+    "node-static": "~0.7.0",
+    "node-uuid": "~1.4.0",
+    "browserify": "~2.25.0",
+    "duplex-emitter": "~0.2.1",
+    "reconnect": "~1.5.0",
+    "shoe": "0.0.11",
+    "rpc-stream": "~1.0.5"
+  }
+}
